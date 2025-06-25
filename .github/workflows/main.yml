@@ -11,12 +11,25 @@ jobs:
             run: |
              echo "my workflow"
               ls
+          
+          - name: uploading the README.md file
+            uses: actions/upload-artifact@v4
+            with:
+               name: README.md file
+               path: README.md
     
     Test:
         runs-on: ubuntu-latest
         needs: Build
         steps:
-            - name: Second jobs starts
-              run:  cat docs/README.md
+
+          - name: Downloading the README.md file
+            uses: actions/download-artifact@v4
+            with:
+                name: Reading the file
+                path: README.md
+
+          - name: Second jobs starts
+            run:  cat docs/README.md
     
           
