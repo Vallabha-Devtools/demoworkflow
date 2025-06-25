@@ -17,6 +17,6 @@ jobs:
         needs: Build
         steps:
             - name: Second jobs starts
-              run: cat "main.yml"
+              run: cat "README.md"
     
           
