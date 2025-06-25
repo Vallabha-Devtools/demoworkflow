@@ -4,6 +4,9 @@ jobs:
     myfirstjobs:
       runs-on: ubuntu-latest
       steps:
+          - name: checkout repo
+            uses: actions/checkout@v4
+            
           - name: Welcome messege
             run: echo "my workflow"
           
