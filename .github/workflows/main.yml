@@ -6,3 +6,6 @@ jobs:
       steps:
           - name: Welcome messege
             run: echo "my workflow"
+          
+          - name: list files
+            run: ls
