@@ -3,7 +3,7 @@ name: Demo workflow
 on: push
 concurrency:
   group: deployment
-  cancel-in-progress: true
+  cancel-in-progress: false #true
 
 jobs:
     Build:
