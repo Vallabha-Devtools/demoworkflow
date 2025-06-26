@@ -1,6 +1,7 @@
 name: Run C Program
 
 on:
+    #push
   workflow_dispatch:
     
 
