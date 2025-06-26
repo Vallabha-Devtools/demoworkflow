@@ -1,6 +1,6 @@
 name: Demo workflow
 
-on: push
+on: workflow_dispatch #push
 concurrency:
   group: deployment
   cancel-in-progress: true #false
