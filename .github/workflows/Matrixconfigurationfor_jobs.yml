@@ -1,0 +1,24 @@
+on:
+  push
+
+jobs:
+  matrix-configuration-job:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-22.04, windows-latest]
+        images: [picsart, eco-loop]
+        exclude:
+          - images: eco-loop
+            os: windows-latest
+        include:
+          - images: eco-loop
+            os: ubuntu-22.04
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: printing the docker details
+        run: docker info
+
+      - name: printing the docker images
+        run: docker images
