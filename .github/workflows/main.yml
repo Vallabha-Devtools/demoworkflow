@@ -1,6 +1,9 @@
 name: Demo workflow
 
 on: push
+concurrency:
+  group: deployment
+  cancel-in-progress: true
 
 jobs:
     Build:
