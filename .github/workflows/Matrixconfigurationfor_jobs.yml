@@ -1,5 +1,7 @@
+name: Matrix configuration for jobs
 on:
-  push
+  #push
+  workflow_dispatch: 
 
 jobs:
   matrix-configuration-job:
