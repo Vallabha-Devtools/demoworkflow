@@ -23,12 +23,6 @@ jobs:
         needs: Build
         steps:
 
-          - name: Downloading the README.md file
-            uses: actions/download-artifact@v4
-            with:
-                name: Reading the file
-                path: cat docs/README.md
-
           - name: Second jobs starts
             run:  cat docs/README.md
     
