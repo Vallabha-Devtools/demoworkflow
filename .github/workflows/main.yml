@@ -9,7 +9,7 @@ jobs:
 
           - name: Welcome messege and list the files
             run: |
-             echo "my workflow"
+             echo "my demo workflow"
               ls
           
           - name: uploading the README.md file
