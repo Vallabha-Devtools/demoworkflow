@@ -5,10 +5,10 @@ on:
 
 jobs:
   Matrix-configuration:
+    if: github.ref == 'refs/head/main'
     strategy:
       matrix:
         os: [ubuntu-latest, ubuntu-22.04]
-        
 
     runs-on: ${{ matrix.os }}
 
