@@ -1,4 +1,4 @@
-name: Run a C Program
+name: Run the C Program
 
 on:
   workflow_dispatch:
