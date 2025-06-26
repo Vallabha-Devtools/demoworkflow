@@ -38,7 +38,7 @@ jobs:
                 name: sample
 
           - name: Display contents of sample.txt
-           run: cat sample.txt
+            run: cat sample.txt
 
           - name: Second jobs starts
             run:  cat sample.txt
