@@ -1,13 +1,17 @@
 name: Run C Program
 
 on:
-    #push
+  #push
   workflow_dispatch:
-    
 
 jobs:
-  build-and-run:
-    runs-on: ubuntu-latest
+  # build-and-run:
+  Matrix-configuration:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-20.04, windows-latest]
+
+    runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout code
