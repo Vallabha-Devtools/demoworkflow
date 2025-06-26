@@ -27,7 +27,7 @@ jobs:
             uses: actions/download-artifact@v4
             with:
                 name: Reading the file
-                path: README.md
+                path: cat docs/README.md
 
           - name: Second jobs starts
             run:  cat docs/README.md
