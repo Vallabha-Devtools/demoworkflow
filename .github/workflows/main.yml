@@ -42,5 +42,3 @@ jobs:
 
           - name: Second jobs starts
             run:  cat sample.txt
-    
-          
