@@ -24,6 +24,6 @@ jobs:
         steps:
 
           - name: Second jobs starts
-            run:  cat docs/README.md
+            run:  cat sample.txt
     
           
