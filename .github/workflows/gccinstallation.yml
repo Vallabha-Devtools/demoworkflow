@@ -1,15 +1,13 @@
 name: Run C Program
 
 on:
-  #push
   workflow_dispatch:
 
 jobs:
-  # build-and-run:
   Matrix-configuration:
     strategy:
       matrix:
-        os: [ubuntu-latest, ubuntu-20.04, windows-latest]
+        os: [ubuntu-latest, ubuntu-20.04]
 
     runs-on: ${{ matrix.os }}
 
@@ -17,11 +15,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: update the environment
-        run: sudo apt-get update 
+      - name: Update the environment
+        run: sudo apt-get update
 
       - name: Compile C program
         run: gcc sample.c -o sample
 
-      - name: Run C program
+      - name: Run C program (only on ubuntu-latest)
+        if: matrix.os == 'ubuntu-latest'
         run: ./sample
