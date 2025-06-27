@@ -20,7 +20,7 @@ jobs:
         run: sudo apt-get 
 
       - name: Compile C program
-        if: failure()
+        if: success()
         run: gcc sample.c -o sample
 
       - name: Run C program (only on ubuntu-latest)
