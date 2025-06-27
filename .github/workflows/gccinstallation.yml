@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Update the environment
-        uses: sudo apt-get update
+        run: sudo apt-get
 
       - name: Compile C program
         if: always() 
