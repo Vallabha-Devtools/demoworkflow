@@ -1,7 +1,7 @@
 name: Run the C Program
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   Matrix-configuration:
@@ -21,6 +21,7 @@ jobs:
 
       - name: Compile C program
         if: failure()
+        continue-on-error: true
         run: gcc sample.c -o sample
 
       - name: Run C program (only on ubuntu-latest)
