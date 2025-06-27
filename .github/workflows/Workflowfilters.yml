@@ -1,0 +1,25 @@
+name: workflow filters
+
+on:
+  push:
+    branches:
+      - main
+      - '!feature'
+  pull_request:
+    types: 
+      - closed
+      - opened
+    paths-ignore:
+      - Dockerfile
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print the messege
+        run: echo "workflow triggerred"
+
+      - name: list the files
+        run: ls
