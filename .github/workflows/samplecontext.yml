@@ -12,7 +12,7 @@ jobs:
 
   pull_request_ci:
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'pull_request' }}
+    if: ${{ github.event_name == 'push' }}
     steps:
       - name: Run PR CI
         run: echo "Running PR only CI"
