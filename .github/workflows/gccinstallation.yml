@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        run: actions/checkout@v2
 
       - name: Update the environment
-        run: sudo apt-get 
+        run: sudo apt-get update
 
       - name: Compile C program
         if: success()
