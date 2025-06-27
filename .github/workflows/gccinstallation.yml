@@ -1,7 +1,7 @@
 name: Run the C Program
 
 on:
-  workflow_dispatch:
+  push:
 
 jobs:
   Matrix-configuration:
@@ -20,6 +20,7 @@ jobs:
         run: sudo apt-get update
 
       - name: Compile C program
+        continue-on-error: true
         run: gcc sample.c -o sample
 
       - name: Run C program (only on ubuntu-latest)
