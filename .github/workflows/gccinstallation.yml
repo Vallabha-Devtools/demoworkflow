@@ -14,13 +14,13 @@ jobs:
 
     steps:
       - name: Checkout code
-        run: actions/checkout@v2
+        uses: actions/checkout@v2
 
       - name: Update the environment
         run: sudo apt-get update
 
       - name: Compile C program
-        if: success()
+        if: failure()
         run: gcc sample.c -o sample
 
       - name: Run C program (only on ubuntu-latest)
