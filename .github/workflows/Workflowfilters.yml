@@ -12,7 +12,8 @@ on:
     paths-ignore:
       - Dockerfile
     branches:
-      - main
+        - feature
+      # - main
 
 jobs:
   build:
