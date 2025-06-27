@@ -26,3 +26,4 @@ jobs:
       - name: Run C program (only on ubuntu-latest)
         if: matrix.os == 'ubuntu-latest'
         run: ./sample
+        
