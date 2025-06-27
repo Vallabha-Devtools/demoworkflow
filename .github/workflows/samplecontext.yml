@@ -1,5 +1,5 @@
 name: sample context file
-on: [push, pull_request]
+on: workflow_ dispatch # [push, pull_request]
 
 jobs:
   normal_ci:
