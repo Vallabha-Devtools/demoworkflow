@@ -1,7 +1,7 @@
 name: Run the C Program
 
 on:
-  push:
+  workflow_dispatch:
 
 jobs:
   Matrix-configuration:
